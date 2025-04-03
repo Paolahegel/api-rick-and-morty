@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import projeto.api_rick_and_morty.client.RickAndMortyClient;
 import projeto.api_rick_and_morty.model.CharacterResponse;
 import projeto.api_rick_and_morty.model.ListOfEpisodesResponse;
+import projeto.api_rick_and_morty.model.LocationResponse;
 
 
 /**
@@ -36,5 +37,12 @@ public class RickAndMortyController {
     public ListOfEpisodesResponse listAllEpisode() {
         return rickAndMortyClient.listAllEpisodes();
     }
+
+    @GetMapping("/location/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public LocationResponse getLocationById(@PathVariable String id) {
+        return rickAndMortyClient.findLocationById(id);
+    }
+
 
 }
