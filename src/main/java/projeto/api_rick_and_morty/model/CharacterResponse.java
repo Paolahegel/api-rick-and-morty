@@ -24,7 +24,7 @@ import java.util.List;
  * @version 1.0
  */
 
-// Consegue visualizar todos os dados dos campos que recebem
+
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public record CharacterResponse(String id,
                                 String name,
