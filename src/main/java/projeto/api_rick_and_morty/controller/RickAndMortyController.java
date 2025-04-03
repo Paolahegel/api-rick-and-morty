@@ -12,9 +12,13 @@ import projeto.api_rick_and_morty.model.LocationResponse;
 /**
  * Controller responsável por expor endpoints para acessar informações da API pública do Rick and Morty.
  *
- * <p>Define as rotas da API e utiliza {@link RickAndMortyClient} para buscar dados da API externa.</p>
+ * <p>Esta classe define as rotas da API e utiliza {@link RickAndMortyClient} para interagir com a API externa.</p>
  *
- * <p>Os métodos estão mapeados com anotações do Spring, como {@GetMapping}.</p>
+ * <p>Os métodos disponíveis permitem buscar dados sobre personagens, episódios e localizações,
+ * seguindo a documentação oficial da API do Rick and Morty:
+ * <a href="https://rickandmortyapi.com/documentation">Rick and Morty API Documentation</a>.</p>
+ *
+ * <p>Os endpoints estão mapeados com anotações do Spring, como {@code @GetMapping}, e retornam respostas com status HTTP apropriados.</p>
  *
  * @author @paolahegel
  * @version 1.0
@@ -43,6 +47,5 @@ public class RickAndMortyController {
     public LocationResponse getLocationById(@PathVariable String id) {
         return rickAndMortyClient.findLocationById(id);
     }
-
 
 }

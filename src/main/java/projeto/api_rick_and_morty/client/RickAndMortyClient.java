@@ -7,12 +7,13 @@ import projeto.api_rick_and_morty.model.ListOfEpisodesResponse;
 import projeto.api_rick_and_morty.model.LocationResponse;
 
 /**
- * Client responsável por intermediar a comunicação entre
- * a aplicação e a API pública do Rick and Morty.
+ * Client responsável por intermediar a comunicação entre a aplicação e a API pública do Rick and Morty.
  *
- * <p> Esta classe fornece métodos para buscar informações sobre personagens da API externa.<p>
+ * <p> Esta classe fornece métodos para buscar informações sobre personagens, episódios e localizações
+ * da API externa, utilizando {@link RestTemplate} para realizar requisições HTTP de forma síncrona.</p>
  *
- * <p>Utiliza {@link RestTemplate} para realizar requisições HTTP de forma síncrona.</p>
+ * <p>Os endpoints utilizados seguem a documentação oficial da API, disponível em:
+ * <a href="https://rickandmortyapi.com/documentation">Rick and Morty API Documentation</a>.</p>
  *
  * @author @paolahegel
  * @version 1.0
