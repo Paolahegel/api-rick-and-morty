@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import projeto.api_rick_and_morty.model.CharacterResponse;
 import projeto.api_rick_and_morty.model.ListOfEpisodesResponse;
+import projeto.api_rick_and_morty.model.LocationResponse;
 
 /**
  * Client responsável por intermediar a comunicação entre
@@ -35,6 +36,11 @@ public class RickAndMortyClient {
     public ListOfEpisodesResponse listAllEpisodes() {
         String url = BASE_URL + "/episode/";
         return restTemplate.getForObject(url, ListOfEpisodesResponse.class);
+    }
+
+    public LocationResponse findLocationById(String id) {
+        String url = BASE_URL + "/location/" + id;
+        return restTemplate.getForObject(url, LocationResponse.class);
     }
 
 }
